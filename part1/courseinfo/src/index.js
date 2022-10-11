@@ -1,42 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const Header = (props) => {
-  console.log(props)
-  return <h1>{props.course.name}</h1>;
-};
+import Total from "./components/Total";
+import Header from "./components/Header";
+import Content from './components/Content'
 
-const Content = (props) => {
-  return (
-    <>
-      <p>
-        {props.parts[0].name} {props.parts[0].exercises}
-      </p>
-      <p>
-        {props.parts[1].name} {props.parts[1].exercises}
-      </p>
-      <p>
-        {props.parts[2].name} {props.parts[2].exercises}
-      </p>
-    </>
-  );
-};
+const course = {
+  name: "Half Stack application development",
 
-const Total = (props) => {
-  return (
-    <p>
-      Number of exercises{" "}
-      {props.parts[0].exercises + props.parts[1].exercises + props.parts[2].exercises}
-    </p>
-  );
-};
-
-const App = () => {
-
-  const course = {
-    name: "Half Stack application development",
-
-   parts :[ {
+  parts :[ {
     name:"Fundamentals of React",
     exercises: 10
   },
@@ -49,18 +21,19 @@ const App = () => {
   {
     name:"State of a component",
     exercises: 17
-  }]
+  }
+  ]
 }
+
+const App = () => {
 
   return (
     <div>
-      <Header course = {course} />
-    
+      <Header course = {course} />    
     
       <Content parts = {course.parts}  />
   
-      <Total parts = {course.parts}/>
-      
+      <Total parts = {course.parts}/>      
     
     </div>
   );
