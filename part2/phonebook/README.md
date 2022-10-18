@@ -1,8 +1,11 @@
-# Courseinfo
-## Exercises 1.1 - 1.2
-## Exercises 1.3.-1.5.
+# phonebook
 
-- Part 1 / courseinfo
+## Exercises 2.6.-2.10.
+## Exercises 2.11
+## Exercises 2.15.-2.18.
+## Exercises 2.19.-2.20.
+
+- Part 2 / phonebook
 
 ### `npm install`
 
@@ -15,6 +18,4 @@ Execute the project in developer server mode  with react script
 ### Author:
 
 Anibal Ortega Torices
-
-
 

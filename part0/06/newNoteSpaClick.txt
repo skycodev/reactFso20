@@ -1,0 +1,18 @@
+note over browser:
+When we click the save button, browser realize a new request with content-type header: 
+application/json and POST method {content: "new note", date: "2022-10-18T08:44:41.608Z"}
+end note
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+
+note over server:
+The server validates this new json and include it. Responds with 201 code and 
+the message note created
+end note
+
+server-->browser: HTTP 201 {"message":"note created"}
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note

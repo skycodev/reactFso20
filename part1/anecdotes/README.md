@@ -1,12 +1,11 @@
-# Unicafe
-## Exercises 1.6.-1.11.
+# Anecdotes
+## Exercises 1.11.-1.14
 
-- Part 1 / unicafe
-
+- Part 1 / anecdotes
 
 ### `npm install`
 
-Install dependecies in your local machine.
+Install the dependecies in your local machine.
 
 ### `npm start`
 
@@ -15,13 +14,4 @@ Execute the project in developer server mode  with react script
 ### Author:
 
 Anibal Ortega Torices
-
-
-
-
-
-
-
-
-
 

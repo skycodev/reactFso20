@@ -1,0 +1,37 @@
+note over browser:
+Button clicked: request to server with method post
+and content-type: application/x-www-form-urlencoded
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+note over server:
+Server respods with status 302 and redirect to /exampleapp/notes
+end note
+
+server-->browser: Server responds with 302  and redirect to /exampleapp/notes
+
+
+note over browser:
+browser reloads with new request to /exampleapp/notes
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server-->browser: HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->browser: main.js
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{"content":"hello","date":"2022-10-17T17:15:20.096Z"}...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
